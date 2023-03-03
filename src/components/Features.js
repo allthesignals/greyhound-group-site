@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const FeatureGrid = ({ gridItems }) => (
-  <div className="flex flex-col -translate-y-28 max-w-12 px-32">
+  <div className="flex flex-col -translate-y-28 sm:max-w-12 sm:px-32">
     {gridItems.map((item, index) => (
       <div key={item.text} className={`${(index % 2 === 0 ? 'self-end' : 'self-start')}`}>
         <div className="
@@ -22,12 +22,12 @@ const FeatureGrid = ({ gridItems }) => (
           sm:after:absolute
           sm:after:w-full
           sm:after:h-full
-          sm:after:right-8
-          sm:after:top-8
+          sm:after:right-10
+          sm:after:top-10
           sm:after:-z-10
           sm:after:content-['']
         ">
-          <p className="p-2 text-3xl">{item.text}</p>
+          <p className="p-2 text-md sm:text-2xl text-gg-dark-green uppercase">{item.text}</p>
         </div>
       </div>
     ))}
