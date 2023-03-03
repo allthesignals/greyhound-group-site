@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({
   const heroImage = getImage(image) || image;
 
   return (
-    <div>
+    <>
       <div className="bg-gg-light-green h-8 w-full"></div>
       <div className="bg-gg-dark-green h-8 w-full"></div>
       <FullWidthImage img={heroImage}/>
@@ -28,7 +28,7 @@ export const IndexPageTemplate = ({
       <div className="bg-gg-light-green">
         <Features gridItems={intro.blurbs} />
       </div>
-    </div>
+    </>
   );
 };
 

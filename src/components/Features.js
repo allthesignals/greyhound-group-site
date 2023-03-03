@@ -3,12 +3,15 @@ import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const FeatureGrid = ({ gridItems }) => (
-  <div className="flex -top-4 pl-32 pr-32 flex-col">
-    {gridItems.map((item) => (
-      <div key={item.text} className="bg-gg-off-white rounded-3xl border-solid border-gg-light-green border-8 max-w-xl -translate-y-6">
-        <section className="section">
-          <p className="p-2">{item.text}</p>
-        </section>
+  <div className="flex flex-col -translate-y-28 max-w-12 px-32">
+    {gridItems.map((item, index) => (
+      <div key={item.text} className={`flex relative pb-12 self-${(index % 2 === 0 ? 'end' : 'start')}`}>
+        <div className="absolute left-4 -top-4 bg-gg-off-white rounded-3xl border-solid border-gg-light-green border-8 max-w-screen-md">
+          <p className="p-2 text-3xl">{item.text}</p>
+        </div>
+        <div className="bg-gg-light-gray rounded-3xl border-solid border-gg-dark-green border-8 max-w-screen-md">
+          <p className="p-2 text-3xl invisible">{item.text}</p>
+        </div>
       </div>
     ))}
   </div>
