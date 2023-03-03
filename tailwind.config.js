@@ -6,6 +6,9 @@ module.exports = {
     "./src/templates/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: 'Raleway'
+    },
     extend: {
       colors: {
         'gg-lavender': '#9C989E',
