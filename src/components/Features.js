@@ -5,7 +5,7 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 const FeatureGrid = ({ gridItems }) => (
   <div className="flex flex-col -translate-y-28 max-w-12 px-32">
     {gridItems.map((item, index) => (
-      <div key={item.text} className={`flex relative pb-12 self-${(index % 2 === 0 ? 'end' : 'start')}`}>
+      <div key={item.text} className={`flex relative pb-12 ${(index % 2 === 0 ? 'self-end' : 'self-start')}`}>
         <div className="absolute left-4 -top-4 bg-gg-off-white rounded-3xl border-solid border-gg-light-green border-8 max-w-screen-md">
           <p className="p-2 text-3xl">{item.text}</p>
         </div>
