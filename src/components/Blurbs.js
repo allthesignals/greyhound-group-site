@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="flex flex-col space-y-10 -translate-y-28 sm:max-w-12 sm:px-32">
