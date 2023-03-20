@@ -28,29 +28,54 @@ export const IndexPageTemplate = ({
       <div className="bg-gg-light-green">
         <Blurbs gridItems={intro.blurbs} />
       </div>
-      <div className="relative">
-        <div
-          className="
-            -top-[500px]
-            -z-10
-            bg-gg-light-green
-            bg-cover
-            w-full
-            h-[1000px]
-            relative
-            overflow-hidden
-            after:content-['']
-            after:w-[300%]
-            after:h-0
-            after:rounded-[100%]
-            after:pt-[200%]
-            after:bg-gg-off-white
-            after:absolute
-            after:top-[60%]
-            after:left-[50%]
-            after:-translate-x-1/2
-          "
-        />
+      <div className="max-h-[13rem] max-w-full overflow-hidden relative">
+        <div className="
+          absolute
+          bg-gg-dark-green
+          mx-auto
+          my-auto
+          left-0
+          right-0
+          top-0
+          bottom-0
+          w-fit
+          h-fit
+          p-8
+          px-20
+          text-white
+          uppercase
+          font-black
+          rounded-3xl
+          text-4xl
+          border-gg-light-green
+          border-8
+        ">
+          Our Services
+        </div>
+        <div className="relative">
+          <div
+            className="
+              -top-[500px]
+              -z-20
+              bg-gg-light-green
+              bg-cover
+              w-full
+              h-[1000px]
+              relative
+              overflow-hidden
+              after:content-['']
+              after:w-[300%]
+              after:h-0
+              after:rounded-[100%]
+              after:pt-[200%]
+              after:bg-gg-off-white
+              after:absolute
+              after:top-[60%]
+              after:left-[50%]
+              after:-translate-x-1/2
+            "
+          />
+        </div>
       </div>
     </>
   );
