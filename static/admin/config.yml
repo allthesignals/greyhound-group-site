@@ -69,6 +69,17 @@ collections:
                         { label: Text, name: text, widget: text },
                       ],
                   },
+                  {
+                    label: Services,
+                    name: services,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Image, name: image, widget: image },
+                        { label: Name, name: name, widget: text },
+                        { label: Description, name: description, widget: text },
+                      ],
+                  },
                 ],
             }
           - {

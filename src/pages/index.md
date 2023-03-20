@@ -30,6 +30,16 @@ intro:
         to help. You can schedule a custom 1-on-1 consultation with our baristas
         to learn anything you want to know about coffee roasting and brewing.
         Email us or call the store for details.
+  services:
+    - name: Brokerage
+      image: /img/coffee.png
+      description: Lorem ipsum
+    - name: Development
+      image: /img/coffee.png
+      description: Lorem ipsum
+    - name: Property Management
+      image: /img/coffee.png
+      description: Lorem ipsum
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their

@@ -5,6 +5,7 @@ import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Blurbs from "../components/Blurbs";
+import Services from "../components/Services";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 
@@ -18,7 +19,7 @@ export const IndexPageTemplate = ({
   intro,
 }) => {
   const heroImage = getImage(image) || image;
-
+  console.log(intro);
   return (
     <>
       <div className="bg-gg-light-green h-8 w-full"></div>
@@ -77,6 +78,7 @@ export const IndexPageTemplate = ({
           />
         </div>
       </div>
+      <Services gridItems={intro.services} />
     </>
   );
 };
@@ -89,6 +91,7 @@ IndexPageTemplate.propTypes = {
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
+    services: PropTypes.array,
   }),
 };
 
@@ -140,6 +143,15 @@ export const pageQuery = graphql`
               }
             }
             text
+          }
+          services {
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+              }
+            }
+            name
+            description
           }
           heading
           description
