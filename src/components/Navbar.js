@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { Disclosure, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from "../img/logo.png";
-import smLogo from "../img/logo-sm.png";
 
 const navigation = [
   { name: 'About', href: '#', current: true },
