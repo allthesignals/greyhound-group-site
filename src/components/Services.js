@@ -44,7 +44,15 @@ const FeatureGrid = ({ gridItems }) => (
               border-8
               border-gg-dark-green
               -translate-y-2
-              ${isEven ? '-translate-x-[120%] group-hover:translate-x-[120%]' : 'translate-x-[160%] group-hover:translate-x-[120%]'}
+              group-hover:border-0
+              group-hover:translate-y-0
+              ${isEven ? `
+                -translate-x-[130%]
+                group-hover:translate-x-[120%]
+              ` : `
+                translate-x-[230%]
+                group-hover:translate-x-[120%]
+              `}
               duration-700
             `}>{item.name}</div>
           </div>
