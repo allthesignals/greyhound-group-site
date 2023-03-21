@@ -20,7 +20,15 @@ const FeatureGrid = ({ gridItems }) => (
         pt-2
         group
       ">
-        <div className="transition-all -translate-x-2/3 group-hover:transform-none group-hover:text-center uppercase text-gg-dark-green font-black text-3xl">
+        <div className="
+          transition-all
+          -translate-x-2/3
+          group-hover:transform-none
+          group-hover:text-center
+          uppercase
+          text-gg-dark-green
+          font-black text-3xl
+        ">
           <span className="bg-gg-light-gray p-4 rounded-3xl border-8 border-gg-dark-green">{item.name}</span>
         </div>
         <div className="invisible group-hover:visible text-right pr-12">{item.description}</div>
@@ -42,7 +50,16 @@ const FeatureGrid = ({ gridItems }) => (
         pt-2
         group
       ">
-        <div className="transition-all translate-x-2/3 group-hover:transform-none group-hover:text-center uppercase text-gg-dark-green font-black text-3xl">
+        <div className="
+          transition-all
+          translate-x-2/3
+          group-hover:transform-none
+          group-hover:text-center
+          uppercase
+          text-gg-dark-green
+          font-black
+          text-3xl
+        ">
           <span className="bg-gg-light-gray p-4 rounded-3xl border-8 border-gg-dark-green">{item.name}</span>
         </div>
         <div className="invisible group-hover:visible text-right pr-12">{item.description}</div>
