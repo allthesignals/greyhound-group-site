@@ -1,72 +1,61 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const FeatureGrid = ({ gridItems }) => (
-  <>
-    {gridItems.map((item, index) => ((index % 2 === 0) ?
-      <div className="pl-12 py-4 bg-gg-off-white">
-        <div className="
-        bg-gg-light-gray
-        border-y-8
-        border-l-8
-        p-12
-        rounded-l-3xl
-        border-gg-dark-green
-        ml-auto
-        w-1/2
-        transition-all
-        ease-in
-        hover:w-11/12
-        pt-2
-        group
-      ">
-        <div className="
-          transition-all
-          -translate-x-2/3
-          group-hover:transform-none
-          group-hover:text-center
-          uppercase
-          text-gg-dark-green
-          font-black text-3xl
-        ">
-          <span className="bg-gg-light-gray p-4 rounded-3xl border-8 border-gg-dark-green">{item.name}</span>
+  <div className="flex flex-col space-y-10 bg-gg-off-white">
+    {gridItems.map((item, index) => {
+      const isEven = index % 2 === 0;
+
+      return <div
+        key={item.text}
+        className={`flex w-full items-start group space-x-10 ${isEven ? "flex-row-reverse self-end space-x-reverse" : "flex-row self-start"}`}
+      >
+        <div
+          className={`
+            basis-[45%]
+            group-hover:basis-[80%]
+            ${isEven ? "rounded-l-3xl border-l-8" : "border-r-8 rounded-r-3xl"}
+            bg-gg-light-gray
+            border-y-8
+            p-12
+            border-gg-dark-green
+            transition-all
+            duration-700
+            ease-in
+            relative
+            box-border
+          `}
+        >
+          <div className={`
+            transition-all
+            uppercase
+            text-gg-dark-green
+            font-black
+            text-3xl
+            w-fit
+            absolute
+            top-0
+          `}>
+            <div className={`
+              bg-gg-light-gray
+              p-4
+              rounded-3xl
+              border-8
+              border-gg-dark-green
+              -translate-y-2
+              ${isEven ? '-translate-x-[120%] group-hover:translate-x-[120%]' : 'translate-x-[160%] group-hover:translate-x-[120%]'}
+              duration-700
+            `}>{item.name}</div>
+          </div>
+          <PreviewCompatibleImage imageInfo={item} />
+          <div className="invisible group-hover:visible text-right pr-12">
+            {item.description}
+          </div>
         </div>
-        <div className="invisible group-hover:visible text-right pr-12">{item.description}</div>
       </div>
-    </div> :
-    <div className="pr-12 py-4 bg-gg-off-white text-right">
-      <div className="
-        bg-gg-light-gray
-        border-y-8
-        border-r-8
-        p-12
-        rounded-r-3xl
-        border-gg-dark-green
-        mr-auto
-        w-1/2
-        transition-[width]
-        ease-in
-        hover:w-11/12
-        pt-2
-        group
-      ">
-        <div className="
-          transition-all
-          translate-x-2/3
-          group-hover:transform-none
-          group-hover:text-center
-          uppercase
-          text-gg-dark-green
-          font-black
-          text-3xl
-        ">
-          <span className="bg-gg-light-gray p-4 rounded-3xl border-8 border-gg-dark-green">{item.name}</span>
-        </div>
-        <div className="invisible group-hover:visible text-right pr-12">{item.description}</div>
-      </div>
-    </div>
-    ))}
-  </>
+    })}
+  </div>
 );
 
 FeatureGrid.propTypes = {

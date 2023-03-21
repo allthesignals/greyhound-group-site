@@ -32,13 +32,13 @@ intro:
         Email us or call the store for details.
   services:
     - name: Brokerage
-      image: /img/coffee.png
+      image: /img/GG_BrokerageIcon_GreenOutline.png
       description: Lorem ipsum
     - name: Development
-      image: /img/coffee.png
+      image: /img/GG_DevelopmentIcon_GreenOutline.png
       description: Lorem ipsum
     - name: Property Management
-      image: /img/coffee.png
+      image: /img/GG_PropertyMangementIcon_GreenOutline.png
       description: Lorem ipsum
   heading: What we offer
   description: >
