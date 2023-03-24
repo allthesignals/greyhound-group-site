@@ -79,6 +79,30 @@ export const IndexPageTemplate = ({
         </div>
       </div>
       <Services gridItems={intro.services} />
+      <div className="relative max-h-[13rem] max-w-full overflow-hidden">
+        <div
+            className="
+              top-[250px]
+              -z-20
+              bg-gg-light-green
+              bg-cover
+              w-full
+              h-[1000px]
+              relative
+              overflow-hidden
+              after:content-['']
+              after:w-[200%]
+              after:h-0
+              after:rounded-[100%]
+              after:pt-[200%]
+              after:bg-gg-off-white
+              after:absolute
+              after:bottom-[80%]
+              after:left-[50%]
+              after:-translate-x-1/2
+            "
+          />
+      </div>
     </>
   );
 };
