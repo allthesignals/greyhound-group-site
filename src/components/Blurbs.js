@@ -27,7 +27,7 @@ const FeatureGrid = ({ gridItems }) => (
           sm:after:-z-10
           sm:after:content-['']
         ">
-          <p className="p-2 text-md sm:text-2xl text-gg-dark-green uppercase font-black">{item.text}</p>
+          <p className="p-2 text-md sm:text-2xl text-gg-ocean-green uppercase font-black">{item.text}</p>
         </div>
       </div>
     ))}

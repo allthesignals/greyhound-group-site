@@ -16,7 +16,8 @@ module.exports = {
         'gg-dark-green': '#9AB7B3',
         'gg-light-green': '#D0DEDC',
         'gg-light-gray': '#E9ECEB',
-        'gg-off-white': '#F5F5F5'
+        'gg-off-white': '#F5F5F5',
+        'gg-ocean-green': '#749A93',
       }
     },
   },

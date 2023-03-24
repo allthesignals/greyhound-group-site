@@ -31,7 +31,7 @@ const FeatureGrid = ({ gridItems }) => (
             rounded-3xl
             border-8
             border-gg-dark-green
-            text-gg-dark-green
+            text-gg-ocean-green
             font-black
             text-3xl
             group-hover:border-transparent

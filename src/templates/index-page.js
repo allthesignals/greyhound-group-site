@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({
   const heroImage = getImage(image) || image;
   console.log(intro);
   return (
-    <>
+    <div className="bg-gg-light-green">
       <div className="bg-gg-light-green h-8 w-full"></div>
       <div className="bg-gg-dark-green h-8 w-full"></div>
       <FullWidthImage img={heroImage}/>
@@ -32,6 +32,7 @@ export const IndexPageTemplate = ({
       <div className="max-h-[13rem] max-w-full overflow-hidden relative">
         <div className="
           absolute
+          z-10
           bg-gg-dark-green
           mx-auto
           my-auto
@@ -53,11 +54,11 @@ export const IndexPageTemplate = ({
         ">
           Our Services
         </div>
-        <div className="relative">
+        <div className="relative bg-gg-light-gray">
           <div
             className="
               -top-[500px]
-              -z-20
+              z-0
               bg-gg-light-green
               bg-cover
               w-full
@@ -79,11 +80,10 @@ export const IndexPageTemplate = ({
         </div>
       </div>
       <Services gridItems={intro.services} />
-      <div className="relative max-h-[13rem] max-w-full overflow-hidden">
+      <div className="relative max-h-[13rem] max-w-full overflow-hidden bg-gg-light-gray">
         <div
             className="
-              top-[250px]
-              -z-20
+              z-0
               bg-gg-light-green
               bg-cover
               w-full
@@ -103,7 +103,33 @@ export const IndexPageTemplate = ({
             "
           />
       </div>
-    </>
+      <div className="
+        -translate-y-32
+        bg-gg-light-gray
+        mx-24
+        p-4
+        rounded-3xl
+        border-8
+        border-gg-dark-green
+        flex
+        flex-col
+      ">
+        <div className="
+          text-gg-ocean-green
+          font-black
+          text-3xl
+          bg-gg-off-white
+          rounded-3xl
+          border-8
+          border-gg-dark-green
+          p-4
+          -translate-x-24
+        ">Exceeding Expectations and Breaking Stereotypes</div>
+        <div className="p-12">
+          Churn and burn? We think not.
+        </div>
+      </div>
+    </div>
   );
 };
 

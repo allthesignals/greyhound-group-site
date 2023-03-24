@@ -19,7 +19,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="sm:sticky sm:top-0 sm:z-10">
+    <Disclosure as="nav" className="sm:sticky sm:top-0 sm:z-20">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
