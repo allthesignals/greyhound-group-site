@@ -141,19 +141,17 @@ export default class Index extends React.Component {
                 />
               </div>
             </div>
-            <div className="mx-auto">
-              <button className="
-                bg-gg-light-gray
-                rounded-lg
-                border-4
-                border-gg-dark-green
-                w-fit
-                mx-auto
-                p-2
-              " type="submit">
-                Submit
-              </button>
-            </div>
+            <button className="
+              bg-gg-light-gray
+              rounded-lg
+              border-4
+              border-gg-dark-green
+              w-fit
+              mx-auto
+              p-2
+            " type="submit">
+              Submit
+            </button>
           </form>
         </div>
       </Layout>

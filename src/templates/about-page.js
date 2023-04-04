@@ -34,7 +34,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         translate-x-24
         -translate-y-12
       ">{title}</div>
-      <PageContent className="content" content={content} />
+      <PageContent className="content prose" content={content} />
     </div>
   </>);
 };
