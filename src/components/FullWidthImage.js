@@ -22,7 +22,7 @@ export default function FullWidthImage(props) {
       >
         {img?.url ? (
           <img
-            src={img}
+            src={img.url}
             objectFit={"cover"}
             objectPosition={imgPosition}
             style={{

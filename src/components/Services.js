@@ -8,7 +8,7 @@ const FeatureGrid = ({ gridItems }) => (
       const isEven = index % 2 === 0;
 
       return <div
-        key={item.text}
+        key={index}
         className={`
           flex w-full
           items-start

@@ -8,7 +8,7 @@ const FeatureGrid = ({ gridItems }) => (
       <div key={item.text} className={`md:pl-24 md:pr-24 ${(index % 2 === 0 ? 'self-start' : 'self-end')}`}>
         <div className="
           relative
-          bg-gg-off-white
+          bg-white
           rounded-3xl
           border-solid
           border-gg-light-green

@@ -1,13 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
-
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Blurbs from "../components/Blurbs";
 import Services from "../components/Services";
-import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
+import Hero from "../components/Hero";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -18,14 +15,9 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  const heroImage = getImage(image) || image;
-  console.log(intro);
   return (
-    <div className="bg-gg-light-green">
-      <div className="bg-gg-light-green h-8 w-full"></div>
-      <div className="bg-gg-dark-green h-8 w-full"></div>
-      <FullWidthImage img={heroImage}/>
-      <div className="bg-gg-dark-green h-8 w-full"></div>
+    <>
+      <Hero heroImage={image} />
       <div className="bg-gg-light-green">
         <Blurbs gridItems={intro.blurbs} />
       </div>
@@ -106,7 +98,7 @@ export const IndexPageTemplate = ({
       <div className="
         -translate-y-32
         bg-gg-light-gray
-        mx-24
+        mx-32
         p-4
         rounded-3xl
         border-8
@@ -118,7 +110,7 @@ export const IndexPageTemplate = ({
           text-gg-ocean-green
           font-black
           text-3xl
-          bg-gg-off-white
+          bg-white
           rounded-3xl
           border-8
           border-gg-dark-green
@@ -129,7 +121,7 @@ export const IndexPageTemplate = ({
           Churn and burn? We think not.
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

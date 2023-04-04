@@ -48,7 +48,11 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <div className="bg-gg-light-green">
+        <div className="bg-gg-light-green h-8 w-full"></div>
+        <div className="bg-gg-dark-green h-8 w-full"></div>
+        {children}
+      </div>
       <Footer />
     </div>
   );
