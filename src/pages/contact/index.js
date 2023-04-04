@@ -69,6 +69,7 @@ export default class Index extends React.Component {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
+            className="mx-12"
           >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value="contact" />
@@ -80,11 +81,17 @@ export default class Index extends React.Component {
             </div>
             <div className="field">
               <label className="label" htmlFor={"name"}>
-                Your name
+                Name
               </label>
               <div className="control">
                 <input
-                  className="input"
+                  className="
+                    bg-gg-light-gray
+                    rounded-lg
+                    border-4
+                    border-gg-dark-green
+                    w-full
+                  "
                   type={"text"}
                   name={"name"}
                   onChange={this.handleChange}
@@ -99,7 +106,13 @@ export default class Index extends React.Component {
               </label>
               <div className="control">
                 <input
-                  className="input"
+                  className="
+                    bg-gg-light-gray
+                    rounded-lg
+                    border-4
+                    border-gg-dark-green
+                    w-full
+                  "
                   type={"email"}
                   name={"email"}
                   onChange={this.handleChange}
@@ -114,7 +127,13 @@ export default class Index extends React.Component {
               </label>
               <div className="control">
                 <textarea
-                  className="textarea"
+                  className="
+                    bg-gg-light-gray
+                    rounded-lg
+                    border-4
+                    border-gg-dark-green
+                    w-full
+                  "
                   name={"message"}
                   onChange={this.handleChange}
                   id={"message"}
@@ -122,9 +141,17 @@ export default class Index extends React.Component {
                 />
               </div>
             </div>
-            <div className="field">
-              <button className="button is-link" type="submit">
-                Send
+            <div className="mx-auto">
+              <button className="
+                bg-gg-light-gray
+                rounded-lg
+                border-4
+                border-gg-dark-green
+                w-fit
+                mx-auto
+                p-2
+              " type="submit">
+                Submit
               </button>
             </div>
           </form>
