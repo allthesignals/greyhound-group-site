@@ -11,7 +11,31 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (<>
     <Hero />
-    <PageContent className="content" content={content} />
+    <div className="
+      bg-white
+      rounded-3xl
+      border-solid
+      border-gg-dark-green
+      border-8
+      p-2
+      m-2
+      mx-24
+    ">
+      <div className="
+        text-gg-ocean-green
+        font-black
+        text-3xl
+        bg-gg-light-gray
+        rounded-3xl
+        border-8
+        border-gg-dark-green
+        p-8
+        w-fit
+        translate-x-24
+        -translate-y-12
+      ">{title}</div>
+      <PageContent className="content" content={content} />
+    </div>
   </>);
 };
 
