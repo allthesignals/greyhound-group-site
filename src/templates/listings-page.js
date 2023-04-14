@@ -43,8 +43,28 @@ export const ListingsPageTemplate = ({
         -translate-y-12
       ">Listings</div>
       <div className="flex flex-col space-y-4 divide-y-4 divide-gg-light-green">
-        {listings.map(listing => <div>
-          <PreviewCompatibleImage imageInfo={listing.image} />
+        {listings.map(listing => <div className="flex flex-row space-x-4 m-1">
+          <div className="basis-1/3">
+            <img src={listing.image} className="w-full" />
+          </div>
+          <div className="basis-1/3">
+            <h1 className="text-2xl">{listing.name}</h1>
+            <p>
+              {listing.description}
+            </p>
+          </div>
+          <div className="basis-1/3">
+            <span className="text-xs">type</span>
+            <h3 className="text-lg">{listing.type}</h3>
+            <span className="text-xs">subtype</span>
+            <h3 className="text-lg">{listing.subtype}</h3>
+            <span className="text-xs">status</span>
+            <h3 className="text-lg">{listing.status}</h3>
+            <span className="text-xs">price</span>
+            <h3 className="text-lg">{listing.price}</h3>
+            <span className="text-xs">size</span>
+            <h3 className="text-lg">{listing.size}</h3>
+          </div>
         </div>)}
       </div>
     </div>
@@ -86,12 +106,14 @@ export const listingsPageQuery = graphql`
       frontmatter {
         title
         listings {
-          image {
-            childImageSharp {
-              gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-            }
-          }
-          text
+          type
+          subtype
+          status
+          price
+          size
+          name
+          description
+          image
         }
       }
     }
