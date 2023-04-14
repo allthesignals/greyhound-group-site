@@ -45,7 +45,7 @@ export const ListingsPageTemplate = ({
       <div className="flex flex-col space-y-4 divide-y-4 divide-gg-light-green">
         {listings.map(listing => <div className="flex flex-row space-x-4 m-1">
           <div className="basis-1/3">
-            <img src={listing.image} className="w-full" />
+            <img src={listing.image} className="w-full p-2" />
           </div>
           <div className="basis-1/3">
             <h1 className="text-2xl">{listing.name}</h1>
