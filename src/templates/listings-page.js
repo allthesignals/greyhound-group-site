@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import Image from "react-image-enlarger";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Testimonials from "../components/Testimonials";
 import Pricing from "../components/Pricing";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import FullWidthImage from "../components/FullWidthImage";
+
+function EnlargableImage({ src }) {
+  const [zoomed, setZoomed] = useState(false);
+
+  return <Image
+    className="w-full"
+    zoomed={zoomed}
+    src={src}
+    onClick={() => setZoomed(true)}
+    onRequestClose={() => setZoomed(false)}
+  />
+}
 
 // eslint-disable-next-line
 export const ListingsPageTemplate = ({
@@ -43,9 +56,9 @@ export const ListingsPageTemplate = ({
         -translate-y-12
       ">Listings</div>
       <div className="flex flex-col space-y-4 divide-y-4 divide-gg-light-green">
-        {listings.map(listing => <div className="flex flex-row space-x-4 m-1">
-          <div className="basis-1/3">
-            <img src={listing.image} className="w-full p-2" />
+        {listings.map(listing => <div className="flex flex-col sm:flex-row space-x-4 m-1">
+          <div className="basis-1/3 m-2">
+            <EnlargableImage src={listing.image}  />
           </div>
           <div className="basis-1/3">
             <h1 className="text-2xl">{listing.name}</h1>
