@@ -5,10 +5,7 @@ import { getImage } from "gatsby-plugin-image";
 import Image from "react-image-enlarger";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
-import Testimonials from "../components/Testimonials";
-import Pricing from "../components/Pricing";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import FullWidthImage from "../components/FullWidthImage";
+import LISTINGS_DATA from "../pages/listings/data.json"
 
 function EnlargableImage({ src }) {
   const [zoomed, setZoomed] = useState(false);
@@ -56,7 +53,7 @@ export const ListingsPageTemplate = ({
         -translate-y-12
       ">Listings</div>
       <div className="flex flex-col space-y-4 divide-y-4 divide-gg-light-green">
-        {listings.map(listing => <div className="flex flex-col sm:flex-row space-x-4 m-1">
+        {LISTINGS_DATA.map(listing => <div className="flex flex-col sm:flex-row space-x-4 m-1">
           <div className="basis-1/3 m-2">
             <EnlargableImage src={listing.image}  />
           </div>
