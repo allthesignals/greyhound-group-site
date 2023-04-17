@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import Image from "react-image-enlarger";
 import Layout from "../components/Layout";
+import { useScript } from 'usehooks-ts'
 import Hero from "../components/Hero";
-import LISTINGS_DATA from "../pages/listings/data.json"
 
 function EnlargableImage({ src }) {
   const [zoomed, setZoomed] = useState(false);
@@ -25,6 +25,19 @@ export const ListingsPageTemplate = ({
   listings,
 }) => {
   const heroImage = getImage(image) || image;
+  const status = useScript('//buildout.com/api.js?v8', {
+    removeOnUnmount: false,
+  })
+
+  useEffect(() => {
+    if (window.BuildOut) {
+      window.BuildOut.embed({
+        token:     "b1add7922b45a081858a7b02bc33500c7bc35f3b",
+        plugin:    "inventory",
+        target:    "buildout"
+      });
+    }
+  }, [status]);
 
   return (
     <>
@@ -53,29 +66,7 @@ export const ListingsPageTemplate = ({
         -translate-y-12
       ">Listings</div>
       <div className="flex flex-col space-y-4 divide-y-4 divide-gg-light-green">
-        {LISTINGS_DATA.map(listing => <div className="flex flex-col sm:flex-row space-x-4 m-1">
-          <div className="basis-1/3 m-2">
-            <EnlargableImage src={listing.image}  />
-          </div>
-          <div className="basis-1/3">
-            <h1 className="text-2xl">{listing.name}</h1>
-            <p>
-              {listing.description}
-            </p>
-          </div>
-          <div className="basis-1/3">
-            <span className="text-xs">type</span>
-            <h3 className="text-lg">{listing.type}</h3>
-            <span className="text-xs">subtype</span>
-            <h3 className="text-lg">{listing.subtype}</h3>
-            <span className="text-xs">status</span>
-            <h3 className="text-lg">{listing.status}</h3>
-            <span className="text-xs">price</span>
-            <h3 className="text-lg">{listing.price}</h3>
-            <span className="text-xs">size</span>
-            <h3 className="text-lg">{listing.size}</h3>
-          </div>
-        </div>)}
+        <div id="buildout"></div>
       </div>
     </div>
     </>
