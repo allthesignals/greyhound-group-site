@@ -118,7 +118,7 @@ export const IndexPageTemplate = ({
           -translate-x-24
         ">Exceeding Expectations and Breaking Stereotypes</div>
         <div className="p-12">
-          Churn and burn? We think not.
+          The commercial real estate industry has a stereotype for being deal driven. The Greyhound Group works to understand our client’s needs an facilitate the best results. The Greyhound Group is client driven. Our dedication to client success is what defines us. 
         </div>
       </div>
     </>

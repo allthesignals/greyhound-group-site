@@ -12,34 +12,25 @@ intro:
   blurbs:
     - image: /img/coffee.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+        The greyhound group provides commercial real estate brokerage, management and development services.
+
+        The greyhound group’s purpose is to provide its clients with the highest quality services backed by market knowledge and uncompromising standards.
     - image: /img/coffee-gear.png
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
+        The greyhound group is a boutique commercial real estate firm based in oklahoma city. The group offers full service commercial real estate solutions to companies of all sizes and industry.
     - image: /img/tutorials.png
       text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
+        Companies look to us to provide them with the highest quality customer service, personalized to meet their unique needs and requirements. Whether you are a seasoned investor or a start-up, the greyhound group can help you find the perfect commercial real estate solution.
   services:
     - name: Brokerage
       image: /img/GG_BrokerageIcon_GreenOutline.png
-      description: Lorem ipsum
+      description: The Greyhound Group represents Landlords, Tenants, Buyer and Sellers. Learn more about Greyhound’s brokerage services. 
     - name: Development
       image: /img/GG_DevelopmentIcon_GreenOutline.png
-      description: Lorem ipsum
+      description: The Greyhound Group is a fee developer, helping its clients meet their returns and realize their vision. Learn more about Greyhound’s development services.
     - name: Property Management
       image: /img/GG_PropertyMangementIcon_GreenOutline.png
-      description: Lorem ipsum
+      description: The Greyhound Group maximizes the potential of its client portfolios. Learn more about Greyhound’s property management services.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
