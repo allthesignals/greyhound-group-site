@@ -5,7 +5,7 @@ import defaultHeroImage from '../../static/img/gg-illustration-1.jpg'
 
 const Hero = ({ heroImage }) => {
   const image = getImage(heroImage) || { url: defaultHeroImage };
-  console.log(image);
+
   return (
     <>
       <FullWidthImage img={image}/>

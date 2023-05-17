@@ -50,7 +50,9 @@ export const ListingsPageTemplate = ({
       border-8
       p-2
       m-2
-      mx-24
+      lg:mx-24
+      -translate-y-48
+      lg:transform-none
     ">
       <div className="
         text-gg-ocean-green
