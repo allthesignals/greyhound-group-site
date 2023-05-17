@@ -60,14 +60,12 @@ const FeatureGrid = ({ gridItems }) => (
             ease-in
             box-border
             ${isEven ? 'rounded-l-3xl border-l-8' : 'border-r-8 rounded-r-3xl'}
-            flex
-            flex-row
           `}
         >
-          <div className="inline-block">
+          <div className="inline-block float-left mr-12">
             <PreviewCompatibleImage imageInfo={item} />
           </div>
-          <div className="invisible group-hover:visible text-left pl-12 pt-12">
+          <div className="invisible group-hover:visible text-left px-12 pt-12">
             {item.description}
           </div>
         </div>
