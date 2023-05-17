@@ -1,15 +1,52 @@
 import React, { Fragment } from 'react'
 import { Link } from "gatsby";
-import { Disclosure, Transition } from '@headlessui/react'
+import { Disclosure, Transition, Popover } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import logo from "../img/logo.png";
+
+
+const services = [
+  { name: 'Brokerage', href: '#' },
+  { name: 'Development', href: '#' },
+  { name: 'Property Management', href: '#' },
+];
 
 const navigation = [
   { name: 'About', href: '/about', current: true },
   { name: 'Careers', href: '#', current: false },
   { name: 'Connect', href: '/contact', current: false },
   { name: 'Listings', href: '/listings', current: false },
-  { name: 'Services', href: '#', current: false },
+  {
+      markup: () => 
+      <Popover className="relative flex grow items-center justify-center">
+        <Popover.Button className="flex items-center gap-x-1 text-md text-white hover:text-white font-extrabold uppercase">
+          Services
+          <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+        </Popover.Button>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-200"
+          enterFrom="opacity-0 translate-y-1"
+          enterTo="opacity-100 translate-y-0"
+          leave="transition ease-in duration-150"
+          leaveFrom="opacity-100 translate-y-0"
+          leaveTo="opacity-0 translate-y-1"
+        >
+          <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/5">
+            {services.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="block rounded-lg px-3 py-2 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-50"
+              >
+                {item.name}
+              </a>
+            ))}
+          </Popover.Panel>
+        </Transition>
+      </Popover>
+  },
   { name: 'Login', href: '#', current: false },
 ]
 
@@ -47,8 +84,12 @@ export default function Navbar() {
                 </div>
                 <div className="flex grow hidden sm:block bg-gg-light-green border-solid border-4 border-gg-lavender rounded-lg">
                   <div className="flex grow">
-                    {navigation.map((item) => (
-                      <a
+                    {navigation.map((item) => {
+                      if (item.markup) {
+                        return <item.markup/>;
+                      }
+
+                      return <a
                         key={item.name}
                         href={item.href}
                         className={classNames(
@@ -58,7 +99,7 @@ export default function Navbar() {
                       >
                         {item.name}
                       </a>
-                    ))}
+                    })}
                   </div>
                 </div>
               </div>
