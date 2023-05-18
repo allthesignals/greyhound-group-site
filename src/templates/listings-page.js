@@ -5,7 +5,6 @@ import { getImage } from "gatsby-plugin-image";
 import Image from "react-image-enlarger";
 import Layout from "../components/Layout";
 import { useScript } from 'usehooks-ts'
-import Hero from "../components/Hero";
 
 function EnlargableImage({ src }) {
   const [zoomed, setZoomed] = useState(false);
