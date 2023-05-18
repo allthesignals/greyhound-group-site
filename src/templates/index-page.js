@@ -17,7 +17,7 @@ export const IndexPageTemplate = ({
 }) => {
   return (
     <>
-      <Hero heroImage={image} />
+      <Hero />
       <div className="bg-gg-light-green">
         <Blurbs gridItems={intro.blurbs} />
       </div>
