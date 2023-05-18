@@ -65,7 +65,7 @@ const FeatureGrid = ({ gridItems }) => (
           <div className="inline-block float-left mr-12">
             <PreviewCompatibleImage imageInfo={item} />
           </div>
-          <div className="invisible group-hover:visible text-left px-12 pt-12">
+          <div className="transition-all group-hover:delay-700 text-transparent group-hover:text-current text-left px-12 pt-12">
             {item.description}
           </div>
         </div>
