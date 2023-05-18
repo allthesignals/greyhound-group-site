@@ -41,7 +41,6 @@ export const ListingsPageTemplate = ({
 
   return (
     <>
-    <Hero />
     <div className="
       bg-white
       rounded-3xl

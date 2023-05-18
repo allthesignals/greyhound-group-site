@@ -37,7 +37,6 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <Hero />
         <div className="
           bg-white
           rounded-3xl

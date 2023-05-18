@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+import Hero from "./Hero";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -51,6 +52,7 @@ const TemplateWrapper = ({ children }) => {
       <div className="bg-gg-light-green">
         <div className="bg-gg-light-green h-8 w-full"></div>
         <div className="bg-gg-dark-green h-8 w-full"></div>
+        <Hero />
         {children}
       </div>
       <Footer />

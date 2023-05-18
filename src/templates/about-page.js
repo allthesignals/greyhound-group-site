@@ -10,7 +10,6 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (<>
-    <Hero />
     <div className="
       bg-white
       rounded-3xl

@@ -8,16 +8,10 @@ import Hero from "../components/Hero";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  description,
   intro,
 }) => {
   return (
     <>
-      <Hero />
       <div className="bg-gg-light-green">
         <Blurbs gridItems={intro.blurbs} />
       </div>
