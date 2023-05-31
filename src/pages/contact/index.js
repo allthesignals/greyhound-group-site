@@ -45,7 +45,7 @@ export default class Index extends React.Component {
           border-8
           p-2
           m-2
-          mx-24
+          sm:mx-24
         ">
           <div className="
             text-gg-ocean-green
@@ -68,7 +68,7 @@ export default class Index extends React.Component {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             onSubmit={this.handleSubmit}
-            className="mx-12"
+            className="sm:mx-12"
           >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value="contact" />
