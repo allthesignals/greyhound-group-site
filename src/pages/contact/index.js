@@ -1,7 +1,7 @@
 import * as React from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../../components/Layout";
-import Hero from "../../components/Hero";
+import repeatedContactBg from "../../img/repeated-contact-bg.png";
 
 function encode(data) {
   return Object.keys(data)
@@ -36,7 +36,7 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout bgImage={repeatedContactBg}>
         <div className="
           bg-white
           rounded-3xl
