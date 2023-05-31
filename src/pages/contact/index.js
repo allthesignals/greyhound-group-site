@@ -36,7 +36,11 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Layout bgImage={repeatedContactBg}>
+      <Layout backgroundStyle={{
+        backgroundImage: `url(${repeatedContactBg})`,
+        backgroundRepeat: 'repeat-x',
+        backgroundSize: 'cover',
+      }}>
         <div className="
           bg-white
           rounded-3xl

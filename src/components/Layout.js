@@ -6,7 +6,7 @@ import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 import Hero from "./Hero";
 
-const TemplateWrapper = ({ children, bgImage }) => {
+const TemplateWrapper = ({ children, backgroundStyle = {} }) => {
   const { title, description } = useSiteMetadata();
 
   return (
@@ -50,11 +50,7 @@ const TemplateWrapper = ({ children, bgImage }) => {
       </Helmet>
       <Navbar />
       <div
-        style={(bgImage ? {
-          backgroundImage: `url(${bgImage})`,
-          backgroundRepeat: 'repeat-x',
-          backgroundSize: 'cover'
-        } : {})}
+        style={{...backgroundStyle}}
         className='bg-gg-light-green'
       >
         <div className="bg-gg-light-green h-8 w-full"></div>

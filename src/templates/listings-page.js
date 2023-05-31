@@ -5,6 +5,7 @@ import { getImage } from "gatsby-plugin-image";
 import Image from "react-image-enlarger";
 import Layout from "../components/Layout";
 import { useScript } from 'usehooks-ts'
+import listingsBg from '../../static/img/repeated-listings-bg.png';
 
 function EnlargableImage({ src }) {
   const [zoomed, setZoomed] = useState(false);
@@ -82,7 +83,11 @@ const ListingsPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout>
+    <Layout backgroundStyle={{
+      backgroundImage: `url(${listingsBg})`,
+      backgroundRepeat: 'repeat',
+      backgroundSize: '200px 200px'
+    }}>
       <ListingsPageTemplate
         image={frontmatter.image}
         listings={frontmatter.listings}
