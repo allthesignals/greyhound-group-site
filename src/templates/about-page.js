@@ -18,7 +18,8 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       border-8
       p-2
       m-2
-      mx-24
+      sm:mx-24
+      w-fit
     ">
       <div className="
         text-gg-ocean-green
@@ -33,7 +34,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         translate-x-24
         -translate-y-12
       ">{title}</div>
-      <PageContent className="content prose" content={content} />
+      <PageContent className="w-fit sm:p-12 prose" content={content} />
     </div>
   </>);
 };
