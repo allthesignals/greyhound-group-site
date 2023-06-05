@@ -14,7 +14,7 @@ const services = [
 
 const navigation = [
   { name: 'About', href: '/about', current: true },
-  { name: 'Careers', href: '#', current: false },
+  { name: 'Careers', href: '/careers', current: false },
   { name: 'Connect', href: '/contact', current: false },
   { name: 'Listings', href: '/listings', current: false },
   {
