@@ -2,7 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-const PreviewCompatibleImage = ({ imageInfo, style = {} }) => {
+const PreviewCompatibleImage = ({ imageInfo, className, style = {} }) => {
   const imageStyle = { borderRadius: "5px", ...style };
 
   const { alt = "", childImageSharp, image } = imageInfo;
@@ -10,6 +10,7 @@ const PreviewCompatibleImage = ({ imageInfo, style = {} }) => {
   if (!!image && !!image.childImageSharp) {
     return (
       <GatsbyImage
+        className={className}
         image={image.childImageSharp.gatsbyImageData}
         style={imageStyle}
         alt={alt}
@@ -18,6 +19,7 @@ const PreviewCompatibleImage = ({ imageInfo, style = {} }) => {
   } else if (!!childImageSharp) {
     return (
       <GatsbyImage
+        className={className}
         image={childImageSharp.gatsbyImageData}
         style={imageStyle}
         alt={alt}
@@ -25,7 +27,7 @@ const PreviewCompatibleImage = ({ imageInfo, style = {} }) => {
     );
     // for Netlify CMS 
   } else if (image) {
-    return <img style={{imageStyle}} src={image} alt={alt} />;
+    return <img style={{imageStyle}} className={className} src={image} alt={alt} />;
   } else {
     return null
   }

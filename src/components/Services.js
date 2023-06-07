@@ -63,17 +63,14 @@ const FeatureGrid = ({ gridItems }) => (
             sm:p-12
             border-gg-dark-green
             transition-all
-            duration-700
+            duration-300
             ease-in
             box-border
             ${isLeft ? 'rounded-l-3xl sm:border-l-8 border-l-4' : 'sm:border-r-8 border-r-4 rounded-r-3xl'}
           `}
         >
           <div className="sm:group-hover:block group-hover:hidden inline-block float-left mr-0 sm:mr-12">
-            <PreviewCompatibleImage style={{
-              height: '100px',
-              width: '100px'
-            }} imageInfo={item} />
+            <PreviewCompatibleImage className='w-[100px] h-[100px]' imageInfo={item} />
           </div>
           <div className="
             transition-colors
