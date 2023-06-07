@@ -28,13 +28,16 @@ export const IndexPageTemplate = ({
           bottom-0
           w-fit
           h-fit
-          p-8
-          px-20
+          p-2
+          px-8
+          sm:p-8
+          sm:px-20
           text-white
           uppercase
           font-black
           rounded-3xl
-          text-4xl
+          sm:text-4xl
+          text-xl
           border-gg-light-green
           border-8
         ">
@@ -66,7 +69,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
       <Services gridItems={intro.services} />
-      <div className="relative max-h-[13rem] max-w-full overflow-hidden bg-gg-light-gray">
+      <div className="relative max-h-[9rem] max-w-full overflow-hidden bg-gg-light-gray">
         <div
             className="
               z-0

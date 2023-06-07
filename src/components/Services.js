@@ -5,7 +5,7 @@ import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 const FeatureGrid = ({ gridItems }) => (
   <div className="flex flex-col space-y-10 bg-gg-off-white">
     {gridItems.map((item, index) => {
-      const isEven = index % 2 === 0;
+      const isLeft = index % 2 === 0;
 
       return <div
         key={index}
@@ -14,7 +14,7 @@ const FeatureGrid = ({ gridItems }) => (
           items-start
           group
           relative
-          ${isEven ? 'flex-row-reverse self-end space-x-reverse' : 'flex-row self-start'}
+          ${isLeft ? 'flex-row-reverse self-end space-x-reverse' : 'flex-row self-start'}
         `}
       >
         <div className={`
@@ -29,43 +29,63 @@ const FeatureGrid = ({ gridItems }) => (
             p-4
             uppercase
             rounded-3xl
-            border-8
+            sm:border-8
+            border-4
             border-gg-dark-green
             text-gg-ocean-green
             font-black
-            text-3xl
+            sm:text-3xl
+            text-md
             group-hover:border-transparent
             group-hover:bg-transparent
             w-fit
             absolute
-            ${isEven ? `
-              left-1/4
-              sm:group-hover:left-[45%]
+            ${isLeft ? `
+              sm:left-[10%]
+              sm:group-hover:left-[75%]
+              left-[10%]
+              group-hover:left-[50%]
             ` : `
               sm:left-[60%]
+              left-[50%]
               group-hover:left-1/4
             `}
           `}>{item.name}</div>
         </div>
         <div
           className={`
-            basis-[45%]
+            sm:basis-[45%]
             group-hover:basis-[80%]
             bg-gg-light-gray
-            border-y-8
-            p-12
+            sm:border-y-8
+            border-y-4
+            p-2
+            sm:p-12
             border-gg-dark-green
             transition-all
             duration-700
             ease-in
             box-border
-            ${isEven ? 'rounded-l-3xl border-l-8' : 'border-r-8 rounded-r-3xl'}
+            ${isLeft ? 'rounded-l-3xl sm:border-l-8 border-l-4' : 'sm:border-r-8 border-r-4 rounded-r-3xl'}
           `}
         >
-          <div className="inline-block float-left mr-12">
-            <PreviewCompatibleImage imageInfo={item} />
+          <div className="sm:group-hover:block group-hover:hidden inline-block float-left mr-0 sm:mr-12">
+            <PreviewCompatibleImage style={{
+              height: '100px',
+              width: '100px'
+            }} imageInfo={item} />
           </div>
-          <div className="transition-colors group-hover:delay-700 text-transparent group-hover:text-current text-left px-12 pt-12">
+          <div className="
+            transition-colors
+            group-hover:delay-700
+            hidden
+            group-hover:block
+            text-left
+            sm:text-base
+            text-sm
+            px-12
+            pt-12
+          ">
             {item.description}
           </div>
         </div>
