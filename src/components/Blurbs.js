@@ -1,9 +1,8 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const FeatureGrid = ({ gridItems }) => (
-  <div className="flex flex-col space-y-10 -translate-y-28 sm:max-w-12 sm:px-32">
+  <div className="flex flex-col space-y-10 sm:-translate-y-28 sm:max-w-12 sm:px-32">
     {gridItems.map((item, index) => (
       <div key={item.text} className={`md:pl-24 md:pr-24 ${(index % 2 === 0 ? 'self-start' : 'self-end')}`}>
         <div className="

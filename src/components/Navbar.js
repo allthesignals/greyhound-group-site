@@ -59,7 +59,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="sm:sticky sm:top-0 sm:z-20">
       {({ open }) => (
         <>
-          <div className="mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto p-4 sm:px-6 lg:px-8">
             <div className="relative flex h-16 sm:h-32">
               <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -72,11 +72,11 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center">
+              <div className="flex flex-1 sm:items-center sm:justify-center">
                 <div className="flex flex-shrink-0 items-center">
                   <Link to="/" className=" sm:relative sm:-right-6" title="Logo">
                     <img
-                      className="lg:h-12 h-10 w-auto"
+                      className="sm:h-10 h-16 w-auto"
                       src={logo}
                       alt="Greyhound Group"
                     />

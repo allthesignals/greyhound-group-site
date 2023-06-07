@@ -21,7 +21,12 @@ const Hero = () => {
 
   return (
     <>
-      <FullWidthImage img={image}/>
+      <img
+        src={image.url}
+        className="w-full h-[65vh] object-cover"
+        alt=""
+        formats={["auto", "webp", "avif"]}
+      />
       <div className="bg-gg-dark-green h-8 w-full"></div>
     </>
   );

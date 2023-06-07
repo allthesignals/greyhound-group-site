@@ -16,7 +16,7 @@ export default function FullWidthImage(props) {
       <div
         className="margin-top-0"
         style={{
-          display: "grid",
+          // display: "grid",
           alignItems: "center",
         }}
       >
