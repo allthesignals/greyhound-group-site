@@ -70,7 +70,7 @@ const FeatureGrid = ({ gridItems }) => (
           `}
         >
           <div className="sm:group-hover:block group-hover:hidden inline-block float-left mr-0 sm:mr-12">
-            <PreviewCompatibleImage className='w-[100px] h-[100px]' imageInfo={item} />
+            <PreviewCompatibleImage className='w-[100px] h-[100px] sm:w-[200px] sm:h-[200px]' imageInfo={item} />
           </div>
           <div className="
             transition-colors

@@ -117,7 +117,7 @@ export const IndexPageTemplate = ({
           border-gg-dark-green
           sm:p-4
           p-2
-          sm:-translate-x-24
+          sm:-translate-x-12
         ">Exceeding Expectations and Breaking Stereotypes</div>
         <div className="sm:p-12 p-6">
           The commercial real estate industry has a stereotype for being deal driven. The Greyhound Group works to understand our client’s needs an facilitate the best results. The Greyhound Group is client driven. Our dedication to client success is what defines us. 
