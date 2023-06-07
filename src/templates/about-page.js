@@ -24,12 +24,14 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       <div className="
         text-gg-ocean-green
         font-black
-        text-3xl
+        sm:text-3xl
+        text-xl
         bg-gg-light-gray
         rounded-3xl
         border-8
         border-gg-dark-green
-        p-8
+        sm:p-8
+        p-2
         w-fit
         translate-x-24
         -translate-y-12
