@@ -40,9 +40,9 @@ const FeatureGrid = ({ gridItems }) => (
             absolute
             ${isEven ? `
               left-1/4
-              group-hover:left-[45%]
+              sm:group-hover:left-[45%]
             ` : `
-              left-[60%]
+              sm:left-[60%]
               group-hover:left-1/4
             `}
           `}>{item.name}</div>
